@@ -42,11 +42,11 @@ function TodoList(){
         <div className="to-do-list">
             <h1>To Do List</h1>
             <div>
-                <input type="text" placeholder="Write your task..." value={newTask} onChange={handleInputChange}/>
+                <input type="text" placeholder="Write a task..." value={newTask} onChange={handleInputChange}/>
                 <button className="add-button" onClick={addTask}>Add Task</button>
                 <ol className="list">
                     {tasks.map((task, index) => <li key={index}>
-                    <span className="task-text">{task}</span>
+                    <span className="text">{task}</span>
                     <button className="delete-button" onClick={() => {deleteTask(index)}}>Delete Task</button>
                     <button className="move-button" onClick={() => {moveTaskUp(index)}}>⬆️</button>
                     <button className="move-button" onClick={() => {moveTaskDown(index)}}>⬇️</button></li>)}
